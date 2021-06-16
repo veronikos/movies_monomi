@@ -1,5 +1,4 @@
 import axios from "axios";
-
 import React from "react";
 
 export class Content extends React.Component {
@@ -21,19 +20,10 @@ export class Content extends React.Component {
   }
 
   render() {
-    // function calculateWordLetters(word) {
-    //     const sortedMovies = {};
-    
-    //     for (let i = 0; i < word.length; i++) {
-    //       sortedMovies[word[i]] = sortedMovies[word[i]] + 1 || 1
-    //     }
-    //     return sortedMovies;
-    //   }
 
-    this.state.movies.forEach(movie => (
-        // console.log(movie.genres)
-        this.state.sortedByGenre = [...this.state.sortedByGenre, movie.genres]
-        // const [sortedByGenre, setSorted] = useState(initialState)
+
+  this.state.movies.forEach(movie => (
+      console.log(movie.genres)
     ))
     
 

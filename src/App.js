@@ -1,13 +1,13 @@
 import './App.css';
 import { Header } from './components/Header';
-import { Content } from './components/Content';
+import { MoviesList } from './components/MoviesList';
 
 function App() {
   return (
     <div className="App">
       <Header></Header>
       <div className="content">
-        <Content></Content>
+        <MoviesList></MoviesList>
       </div>
     </div>
   );
