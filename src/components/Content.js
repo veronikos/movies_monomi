@@ -4,13 +4,14 @@ import React from "react";
 export class Content extends React.Component {
   state = {
     movies: [],
-    sortedByGenre: []
+    sortedByGenre: [],
+    search: "",
   };
 
   componentDidMount() {
     axios
       .get(`https://wookie.codesubmit.io/movies`, {
-        headers: {Authorization: `Bearer Wookie2021`},
+        headers: { Authorization: `Bearer Wookie2021` },
       })
       .then((res) => {
         const movies = res.data.movies;
@@ -19,17 +20,28 @@ export class Content extends React.Component {
       });
   }
 
+  handleSearchChange = (e) => {
+    const inputValue = e.target.value.toLowerCase();
+    this.setState({
+      search: e.target.value,
+      sortedByGenre: this.state.movies.filter((movie) =>
+        movie.title.toLowerCase().includes(inputValue)
+      ),
+    });
+  };
+
   render() {
-
-
-  this.state.movies.forEach(movie => (
-      console.log(movie.genres)
-    ))
-    
+    // this.state.movies.forEach((movie) => console.log(movie.genres));
 
     return (
       <div>
-        {this.state.movies.map((movie) => (
+        <input
+          type="text"
+          placeholder="Search films..."
+          value={this.state.search}
+          onChange={this.handleSearchChange}
+        />
+        {this.state.sortedByGenre.map((movie) => (
           <div className="img__wrap" key={movie.id}>
             <img
               className="photoMovie"
