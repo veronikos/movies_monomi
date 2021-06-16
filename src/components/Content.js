@@ -4,7 +4,7 @@ import React from "react";
 export class Content extends React.Component {
   state = {
     movies: [],
-    search: '',
+    search: "",
   };
 
   componentDidMount() {
@@ -34,24 +34,27 @@ export class Content extends React.Component {
 
     return (
       <div>
+        {" "}
         <input
           type="text"
           placeholder="Search films..."
           value={this.state.search}
           onChange={this.handleSearchChange}
         />
-        {this.state.movies.map((movie) => (
-          <div className="img__wrap" key={movie.id}>
-            <img
-              className="photoMovie"
-              src={movie.backdrop}
-              alt={movie.title}
-            />
-            <div className="img__description_layer">
-              <p className="img__description">{movie.title}</p>
+        <div>
+          {this.state.movies.map((movie) => (
+            <div className="img__wrap" key={movie.id}>
+              <img
+                className="photoMovie"
+                src={movie.backdrop}
+                alt={movie.title}
+              />
+              <div className="img__description_layer">
+                <p className="img__description">{movie.title}</p>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     );
   }
