@@ -14,15 +14,14 @@ export class Content extends React.Component {
         this.setState({ movies });
         console.log(movies[0])
       })
-
-
   }
 
   render() {
     return (
-      <ul>
-        { this.state.movies.map(movie => <li>{movie.title}</li>)}
-      </ul>
+        <div>
+            {/* {this.state.movies.map(movie => <li>{movie.title}</li>)} */}
+        {this.state.movies.map(movie => <img className="photoMovie" src={movie.backdrop} alt={movie.title}/>)}
+        </div>
     )
   }
 }

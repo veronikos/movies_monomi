@@ -65,3 +65,10 @@ input {
 ul {
   margin: 0;
 }
+
+
+.photoMovie {
+  width: 300px;
+  height: auto;
+  padding: 10px;
+}
