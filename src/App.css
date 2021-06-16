@@ -70,5 +70,42 @@ ul {
 .photoMovie {
   width: 300px;
   height: auto;
+
+}
+
+.img__wrap {
+  position: relative;
+  height: 168px;
+  width: 300px;
+  display: inline-block;
   padding: 10px;
+}
+
+.img__description_layer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(207, 207, 207, 0.6);
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img__wrap:hover .img__description_layer {
+  visibility: visible;
+  opacity: 1;
+}
+
+.img__description {
+  transition: .2s;
+  transform: translateY(1em);
+}
+
+.img__wrap:hover .img__description {
+  transform: translateY(0);
 }
