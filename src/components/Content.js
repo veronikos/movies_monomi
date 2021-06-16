@@ -4,8 +4,7 @@ import React from "react";
 export class Content extends React.Component {
   state = {
     movies: [],
-    sortedByGenre: [],
-    search: "",
+    search: '',
   };
 
   componentDidMount() {
@@ -24,7 +23,7 @@ export class Content extends React.Component {
     const inputValue = e.target.value.toLowerCase();
     this.setState({
       search: e.target.value,
-      sortedByGenre: this.state.movies.filter((movie) =>
+      movies: this.state.movies.filter((movie) =>
         movie.title.toLowerCase().includes(inputValue)
       ),
     });
@@ -41,7 +40,7 @@ export class Content extends React.Component {
           value={this.state.search}
           onChange={this.handleSearchChange}
         />
-        {this.state.sortedByGenre.map((movie) => (
+        {this.state.movies.map((movie) => (
           <div className="img__wrap" key={movie.id}>
             <img
               className="photoMovie"
