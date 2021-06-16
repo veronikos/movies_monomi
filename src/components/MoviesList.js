@@ -16,15 +16,14 @@ export function MoviesList() {
       });
   }, [setmovies]);
 
+  console.log(movies)
+  console.log(movies.map((movie) => movie.genres));
+
   return (
     <div>
       {movies.map((movie) => (
         <div className="img__wrap" key={movie.id}>
-          <img
-            className="photoMovie"
-            src={movie.backdrop}
-            alt={movie.title}
-          />
+          <img className="photoMovie" src={movie.backdrop} alt={movie.title} />
           <div className="img__description_layer">
             <p className="img__description">{movie.title}</p>
           </div>
