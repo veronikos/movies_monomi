@@ -1,5 +1,6 @@
 .App {
-  font-family: 'Baloo Tamma 2', cursive;
+  font-family: "Baloo Tamma 2", cursive;
+  background-color: rgb(207, 207, 207);
 }
 
 .App-header {
@@ -11,7 +12,7 @@
   font-size: calc(10px + 2vmin);
 }
 
-.App-header{
+.App-header {
   border-bottom: 3px solid black;
 }
 
@@ -66,11 +67,9 @@ ul {
   margin: 0;
 }
 
-
 .photoMovie {
   width: 300px;
   height: auto;
-
 }
 
 .img__wrap {
@@ -102,10 +101,53 @@ ul {
 }
 
 .img__description {
-  transition: .2s;
+  transition: 0.2s;
   transform: translateY(1em);
 }
 
 .img__wrap:hover .img__description {
   transform: translateY(0);
+}
+
+.Detailed_View {
+  display: flex;
+}
+
+.poster {
+  padding: 20px;
+}
+
+.Detailed_Texts {
+  max-width: 700px;
+}
+
+.stars {
+  text-align: right;
+}
+
+.stars ul {
+  list-style-type: none;
+  margin-top: 30px;
+}
+
+.stars ul li {
+display: inline;
+margin-right: 10px;
+}
+
+h1 {
+  margin-bottom: 0px
+}
+
+.Title_Stars {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stars ul li::before {
+  content: "\f006";
+  font-family: FontAwesome;
+  font-size: 40px;
+  color: #a07b16;
+  margin-right:0;
 }

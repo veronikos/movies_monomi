@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 
 type DetailsProps = {
   title: string;
-  movies: any;
   backdrop: string;
   cast: any;
   classification: string;
@@ -16,23 +15,50 @@ type DetailsProps = {
   poster: string;
   released_on: string;
   slug: string;
+  movies: any;
+};
+
+type necessary = {
+  slug: any;
+  movie: any;
+  movies: any;
 };
 
 export function Detailed({ movies }: DetailsProps) {
-  let { slug }: DetailsProps = useParams();
+  let { slug }: necessary = useParams();
+
+  console.log(movies[0].slug, "from Detailed", slug, movies[0].slug === slug);
+
   for (let index = 0; index < movies.length; index++) {
     const movie = movies[index];
     if (movie.slug === slug) {
       return (
-        <aside>
-          <h2> {movie.title} </h2>{" "}
-          <div>
-            <h3>ID: {slug}</h3>
-            <div>
-              <p>{movie.title}</p>
+        <div className="Detailed_View">
+          <img className="poster" src={movie.poster} alt={movie.title} />
+          <div className="Detailed_Texts">
+            <div className="Title_Stars">
+              <h1>
+                {movie.title} ({movie.imdb_rating}){" "}
+              </h1>
+              <div className="stars">
+                <ul>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+              </div>
             </div>
-          </div>{" "}
-        </aside>
+            <p>
+              {movie.released_on.slice(0, 4)} | {movie.length} |{" "}
+              {movie.director}
+            </p>
+            <p>cast: {movie.cast.join(", ").toLowerCase()}</p>
+            <p>Movie Description: {movie.overview}</p>
+            <div></div>
+          </div>
+        </div>
       );
     }
   }

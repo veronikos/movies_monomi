@@ -16,7 +16,6 @@ function App() {
     <Router>
       <div className="App">
         <Header></Header>
-      </div>{" "}
       <Switch>
         <Route path="/" exact>
           <div className="content">
@@ -26,6 +25,7 @@ function App() {
         <Route path="/:slug" children={<Detailed movies={movies}/>} />
         {console.log("Movies from Content:", movies)}
       </Switch>
+      </div>{" "}
     </Router>
   );
 }
