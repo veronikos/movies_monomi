@@ -53,6 +53,13 @@
   vertical-align: bottom;
 }
 
+.logo_homepage_link {
+  text-decoration: none;
+}
+.logo_homepage_link:visited {
+  color: black;
+}
+
 input {
   height: 20px;
   margin-top: 50px;
@@ -150,4 +157,13 @@ h1 {
   font-size: 40px;
   color: #a07b16;
   margin-right:0;
+}
+
+.stars ul li {
+  unicode-bidi: bidi-override;
+  z-index: 10;
+  content: "\f005";
+  font-family: FontAwesome;
+  font-size: 40px;
+  cursor: pointer;
 }
