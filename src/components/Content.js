@@ -1,5 +1,6 @@
 import axios from "axios";
 import React from "react";
+import { Link } from "react-router-dom";
 
 export class Content extends React.Component {
   state = {
@@ -30,8 +31,6 @@ export class Content extends React.Component {
   };
 
   render() {
-    // this.state.movies.forEach((movie) => console.log(movie.genres));
-
     return (
       <div>
         {" "}
@@ -44,14 +43,16 @@ export class Content extends React.Component {
         <div>
           {this.state.movies.map((movie) => (
             <div className="img__wrap" key={movie.id}>
-              <img
-                className="photoMovie"
-                src={movie.backdrop}
-                alt={movie.title}
-              />
-              <div className="img__description_layer">
-                <p className="img__description">{movie.title}</p>
-              </div>
+              <Link to={movie.slug}>
+                <img
+                  className="photoMovie"
+                  src={movie.backdrop}
+                  alt={movie.title}
+                />
+                <div className="img__description_layer">
+                  <p className="img__description">{movie.title}</p>
+                </div>
+              </Link>
             </div>
           ))}
         </div>
@@ -59,3 +60,5 @@ export class Content extends React.Component {
     );
   }
 }
+
+
