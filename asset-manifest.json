@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/movies_monomi/static/css/main.1bbfd0c1.chunk.css",
+    "main.js": "/movies_monomi/static/js/main.f9edce45.chunk.js",
+    "main.js.map": "/movies_monomi/static/js/main.f9edce45.chunk.js.map",
+    "runtime-main.js": "/movies_monomi/static/js/runtime-main.5a1c0b6e.js",
+    "runtime-main.js.map": "/movies_monomi/static/js/runtime-main.5a1c0b6e.js.map",
+    "static/js/2.fe1bb20e.chunk.js": "/movies_monomi/static/js/2.fe1bb20e.chunk.js",
+    "static/js/2.fe1bb20e.chunk.js.map": "/movies_monomi/static/js/2.fe1bb20e.chunk.js.map",
+    "static/js/3.504b3bf2.chunk.js": "/movies_monomi/static/js/3.504b3bf2.chunk.js",
+    "static/js/3.504b3bf2.chunk.js.map": "/movies_monomi/static/js/3.504b3bf2.chunk.js.map",
+    "index.html": "/movies_monomi/index.html",
+    "static/css/main.1bbfd0c1.chunk.css.map": "/movies_monomi/static/css/main.1bbfd0c1.chunk.css.map",
+    "static/js/2.fe1bb20e.chunk.js.LICENSE.txt": "/movies_monomi/static/js/2.fe1bb20e.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5a1c0b6e.js",
+    "static/js/2.fe1bb20e.chunk.js",
+    "static/css/main.1bbfd0c1.chunk.css",
+    "static/js/main.f9edce45.chunk.js"
+  ]
+}
