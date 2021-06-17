@@ -17,6 +17,7 @@ export class Content extends React.Component {
         const movies = res.data.movies;
         this.setState({ movies });
         console.log(movies);
+        this.props.getmovies(movies)
       });
   }
 
@@ -25,7 +26,7 @@ export class Content extends React.Component {
     this.setState({
       search: e.target.value,
       movies: this.state.movies.filter((movie) =>
-        movie.title.toLowerCase().includes(inputValue)
+      movie.title.toLowerCase().includes(inputValue)
       ),
     });
   };
