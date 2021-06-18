@@ -16,7 +16,6 @@ export class Content extends React.Component {
       .then((res) => {
         const movies = res.data.movies;
         this.setState({ movies });
-        console.log(movies);
         this.props.getmovies(movies)
       });
   }

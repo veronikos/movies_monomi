@@ -27,8 +27,6 @@ type necessary = {
 export function Detailed({ movies }: DetailsProps) {
   let { slug }: necessary = useParams();
 
-  console.log(movies[0].slug, "from Detailed", slug, movies[0].slug === slug);
-
   for (let index = 0; index < movies.length; index++) {
     const movie = movies[index];
     if (movie.slug === slug) {

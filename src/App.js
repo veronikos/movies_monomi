@@ -11,7 +11,7 @@ function App() {
   function getmovies(movies) {
     setmovies(movies)
   }
-  console.log(movies, "fromContent")
+
   return (
     <Router>
       <div className="App">
@@ -22,8 +22,13 @@ function App() {
             <Content getmovies={getmovies}></Content>
           </div>
         </Route>
+        <Route path="/movies_monomi">
+          <div className="content">
+            <Content getmovies={getmovies}></Content>
+          </div>
+        </Route>
         <Route path="/:slug" children={<Detailed movies={movies}/>} />
-        {console.log("Movies from Content:", movies)}
+        {console.log("movies:", movies)}
       </Switch>
       </div>{" "}
     </Router>
