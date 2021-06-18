@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/movies_monomi/static/css/main.1bbfd0c1.chunk.css",
-    "main.js": "/movies_monomi/static/js/main.d29d0d58.chunk.js",
-    "main.js.map": "/movies_monomi/static/js/main.d29d0d58.chunk.js.map",
+    "main.js": "/movies_monomi/static/js/main.aa1b45d2.chunk.js",
+    "main.js.map": "/movies_monomi/static/js/main.aa1b45d2.chunk.js.map",
     "runtime-main.js": "/movies_monomi/static/js/runtime-main.5a1c0b6e.js",
     "runtime-main.js.map": "/movies_monomi/static/js/runtime-main.5a1c0b6e.js.map",
     "static/js/2.fe1bb20e.chunk.js": "/movies_monomi/static/js/2.fe1bb20e.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.5a1c0b6e.js",
     "static/js/2.fe1bb20e.chunk.js",
     "static/css/main.1bbfd0c1.chunk.css",
-    "static/js/main.d29d0d58.chunk.js"
+    "static/js/main.aa1b45d2.chunk.js"
   ]
 }
